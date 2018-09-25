@@ -18,12 +18,14 @@ public class MyApp {
 	        ArrayList<Integer> wrongRecord=new ArrayList<Integer>();
 	        CreateExercise ce = new CreateExercise();
 	        ce.setMax_num(max_num);
+	        
 	        for (int i = 1; i <= problems_num; i++) {
 	            String problem = ce.create();
 	            exerciseMap.put(i,problem);
 	            String ns = problem;
 	            int rightbrackets;
 	            int leftbrackets;
+	            
 	            if (problem.contains(")")) {
 	                rightbrackets = problem.indexOf(")");
 	                leftbrackets = problem.indexOf("(");
@@ -47,9 +49,7 @@ public class MyApp {
 	            } 
 	                else {
 	                i--;
-	            }
-
-	           
+	            }           
 	        }
 
 	    }

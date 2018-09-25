@@ -19,6 +19,7 @@ public class Calculator {
      */
     public String calculate(String numStr) {
         numStr = removeStrSpace(numStr);
+        
         if (numStr.length() > 1 && !"=".equals(numStr.charAt(numStr.length() - 1) + "")) {
             numStr += "=";
         }
@@ -29,6 +30,7 @@ public class Calculator {
         numStack = new Stack<String>();
         charStack = new Stack<Character>();
         StringBuffer temp = new StringBuffer();
+        
         for (int i = 0; i < numStr.length(); i++) {
             char ch = numStr.charAt(i);
             if (isNumber(ch) || ch == '/') { 
@@ -58,7 +60,7 @@ public class Calculator {
                     }
                     switch (charStack.pop()) {
                         case '+':
-                            numStack.push(f2.plus(f1).print());
+                            numStack.push(f2.add(f1).print());
                             break;
                         case '-':
                         	if ((f1.x/f1.y) >= (f2.x/f2.y)) {
@@ -189,6 +191,7 @@ public class Calculator {
         String[] part = str.split("/");
         int a = Integer.parseInt(part[0]);
         int b = Integer.parseInt(part[1]);
+        
         if (a == b)
             return "1";
         else if (a > b && a % b != 0) {

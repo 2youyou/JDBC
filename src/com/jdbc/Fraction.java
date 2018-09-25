@@ -10,7 +10,7 @@ public class Fraction {
         y = b;
     }
 
-    Fraction plus(Fraction r) {
+    Fraction add(Fraction r) {
         temp = new Fraction(0, 0);
         temp.x = x * r.y + y * r.x;
         temp.y = y * r.y;
@@ -51,7 +51,7 @@ public class Fraction {
             else
                 n = y;
             int maxn = 0;
-            for (int i = 1; i <= n; ++i) {   //约分
+            for (int i = 1; i <= n; ++i) {   			//约分
                 if (x % i == 0 && y % i == 0)
                     maxn = i;
             }

@@ -51,6 +51,7 @@ public class CreateTree
         return false;
     }
 
+    
     public static boolean isEmpty(String str)
     {
         if (str == null || "".equals(str))
@@ -60,6 +61,7 @@ public class CreateTree
         return false;
     }
 
+    
     private static class TreeNode
     {
         Object val;
@@ -70,10 +72,11 @@ public class CreateTree
             this.val = val;
         }
         
-        public void print(int d)
+        
+        public void print(int n)
         {
             StringBuilder printStrBuilder = new StringBuilder("");
-            for (int i = 0; i < d; i++)
+            for (int i = 0; i < n; i++)
             {
                 printStrBuilder.append("- ");
             }
@@ -81,14 +84,15 @@ public class CreateTree
             System.out.println(printStrBuilder);
             if (left != null)
             {
-                left.print(d + 1);
+                left.print(n + 1);
             }
             if (right != null)
             {
-                right.print(d + 1);
+                right.print(n + 1);
             }
         }
 
+        
         public void printAll()
         {
             print(0);
