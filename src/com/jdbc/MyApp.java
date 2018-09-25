@@ -42,7 +42,7 @@ public class MyApp {
 	            String result = cal.calculate(ns);
 	            if (result != null) {
 	                result = cal.getFinalResult(result);
-	                System.out.println(i + ":  " + problem + "=" );
+	                System.out.println(i + ":  " + problem + "=" + result);
 	                rightAnswerMap.put(i, result);
 	            } 
 	                else {
