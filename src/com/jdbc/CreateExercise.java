@@ -9,7 +9,7 @@ public class CreateExercise {
     Random random = new Random();
 
     
-    public void setMax_num(int range_num) {
+    public void setRange_num(int range_num) {
         this.range_num =range_num;
     }
 
